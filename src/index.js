@@ -1,10 +1,10 @@
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import Expenses from "./routes/invoice";
+import Expenses from "./routes/expense";
 import Invoices from "./routes/invoices";
-import Invoice from "./routes/invoices";
+import Invoice from "./routes/invoice";
 import React from 'react'
-import {   BrowserRouter,
+import { BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -16,7 +16,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <BrowserRouter>
 <Routes>
-  <Route path="/" element={<App />}>
+<Route path="/" element={<App />}>
     <Route path="expenses" element={<Expenses />} />
     <Route path="invoices" element={<Invoices />}>
       <Route
@@ -41,4 +41,3 @@ root.render(
 </Routes>
   </BrowserRouter>
 )
-
