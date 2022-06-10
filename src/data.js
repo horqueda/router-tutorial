@@ -8,6 +8,13 @@ export function getInvoice(number) {
   );
 }
 
+export function deleteInvoice(number) {
+  invoices = invoices.filter(
+    (invoice) => invoice.number !== number
+  );
+}
+
+
 let invoices = [
   {
     name: "Santa Monica",
@@ -40,3 +47,4 @@ let invoices = [
     due: "01/27/1998",
   },
 ];
+
